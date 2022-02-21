@@ -23,6 +23,8 @@ Run "cargo run --bin stones_of_wisdom <p1> <p2>"
 
 <p1> and <p2> are numerical values, which set the ai for the palyers Green and Blue.
 
+![alt text](https://github.com/ArthurEfimow/StonesOfWisdom/blob/main/StonesOfWisdom.png?raw=true)
+
 There are six AIs to choose from:
 
 0: No AI. Player input.
