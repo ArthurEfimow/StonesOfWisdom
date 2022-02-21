@@ -1,0 +1,29 @@
+[package]
+name = "star_eater"
+version = "0.1.0"
+authors = ["Arthur Efimow <efimow@web.de>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+    xml-rs = "0.8"
+    serde_derive = "1.0"
+    serde = "1.0"
+    serde-xml-rs = "0.3.1"
+    stb_image = "0.2.2"
+    serde_json = "1.0.49"
+    rand = "0.7.3"
+    rusqlite = "0.24.2"
+    fp_rust = "*"
+    bigint = "*"
+
+[dependencies.sdl2]
+    git = "https://github.com/AngryLawyer/rust-sdl2"
+
+[dependencies.gl]
+    git = "https://github.com/bjz/gl-rs"
+
+[[bin]]
+    name = "tester"
+    path = "./src/tester.rs"
