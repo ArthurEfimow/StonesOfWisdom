@@ -25,7 +25,9 @@ use std::ffi::{CString, CStr};
 
 
 fn main() {
-
+    let args: Vec<String> = std::env::args().collect();
+    let player1 = if args.len() >= 2 {args[1].parse::<i32>().unwrap()} else {0};
+    let player2 = if args.len() >= 3 {args[2].parse::<i32>().unwrap()} else {0};
     let background: form::Background = serde_json::from_str(&std::fs::read_to_string("./Data/Screen1.xml").unwrap()).unwrap();
     
 
@@ -54,7 +56,7 @@ fn main() {
     let mut mouse_clicked:  bool = false;
     let mut mouse_pos_x : f32;
     let mut mouse_pos_y : f32;
-    let mut GF : gamefield::GameField = gamefield::GameField::create(0,0);
+    let mut GF : gamefield::GameField = gamefield::GameField::create(player1,player2);
 
     unsafe {
 	gl::Viewport(0, 0, width as i32, height as i32);
